@@ -14,8 +14,8 @@ export default class AddInfo extends React.Component {
       }
       onDataChange(e) {
         e.preventDefault()
-        const info = {[e.target.name]: e.target.value}
-        // const info = e.target.elements.firstname.lastname.value;
+        // const info = {[e.target.name]: e.target.value}
+        const info = e.target.elements.firstname.value;
         const error = this.props.handleAddData(info);
         
         this.setState(() => ({ error }));
@@ -43,15 +43,14 @@ export default class AddInfo extends React.Component {
                 <input
                   name="firstname"
                   placeholder="first name"
-                  //value={this.state.numberofstudents}
                   onChange={this.handleInputChange}
                 />
-                <input
+                {/* <input
                   name="lastname"
                   placeholder="last name"
                   //value={this.state.numberofstudents}
                   onChange={this.handleInputChange}
-                />
+                /> */}
               </label>
               <br />
 

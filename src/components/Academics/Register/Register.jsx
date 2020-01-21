@@ -7,7 +7,7 @@ class Attendance extends React.Component {
     this.state = {
       // Addstudent: true,
       // Attendance: 200,
-      data: [{ firstname:'', lastname: ''}]
+      data: []
     };
     this.onDataChange = this.onDataChange.bind(this);
   }
@@ -35,7 +35,7 @@ class Attendance extends React.Component {
                 <div class="logoarea pt-5 pb-5 col-md-9">
                   <div class="container">
                     <h2>List of Students</h2>
-                    {this.state.data.map((student, index) => <h1 key={index}>{student.firstname} {student.lastname}</h1>)}                  
+                    {this.state.data.map((student, index) => <h1 key={index}>{student}</h1>)}                  
                   </div>
                 </div>
               </div>

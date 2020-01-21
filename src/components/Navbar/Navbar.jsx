@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../image2/logo.png";
+
 import {
   ButtonDropdown,
   DropdownToggle,
@@ -10,13 +10,15 @@ import {
 function Navbar() {
   const [dropdownOpen, setOpen] = useState(false);
   const [academicsOpen, setAcademicsOpen] = useState(false);
-  const [schoolOpen, setSchoolOpen] = useState(false);
+  const [gradeOpen, setGradeOpen] = useState(false);
   const [calendarOpen, setCalendarOpen] = useState(false);
+  const [summaryOpen, setSummaryOpen] = useState(false);
 
   const toggle = () => setOpen(!dropdownOpen);
   const academicsToggle = () => setAcademicsOpen(!academicsOpen);
-  const schoolToggle = () => setSchoolOpen(!schoolOpen);
+  const gradeToggle = () => setGradeOpen(!gradeOpen);
   const calendarToggle = () => setCalendarOpen(!calendarOpen);
+  const summaryToggle = () => setSummaryOpen(!calendarOpen);
   return (
     <>
       <nav
@@ -24,8 +26,8 @@ function Navbar() {
         id="ftco-navbar"
       >
         <div className="logo">
-          <img src={logo} alt="" />
-          <h4 className="heading2">Mizizi Academy School</h4>
+         
+          <h4 className="heading2">Mizizi Academy </h4>
         </div>
 
         <ul className="navbar-nav ml-auto">
@@ -50,25 +52,25 @@ function Navbar() {
           <ButtonDropdown isOpen={academicsOpen} toggle={academicsToggle}>
             <DropdownToggle caret>Academics</DropdownToggle>
             <DropdownMenu>
-              <a className="nav-link" href="/Performance">
-                <DropdownItem>Performance</DropdownItem>
+              <a className="nav-link" href="/Register">
+                <DropdownItem>Register</DropdownItem>
               </a>
 
-              <a className="nav-link" href="/Kcse">
-                <DropdownItem>Kcse</DropdownItem>
+              <a className="nav-link" href="/Attendance">
+                <DropdownItem>Attendance</DropdownItem>
               </a>
             </DropdownMenu>
           </ButtonDropdown>
 
-          <ButtonDropdown isOpen={schoolOpen} toggle={schoolToggle}>
-            <DropdownToggle caret>The School</DropdownToggle>
+          <ButtonDropdown isOpen={gradeOpen} toggle={gradeToggle}>
+            <DropdownToggle caret>Grades</DropdownToggle>
             <DropdownMenu>
-              <a className="nav-link" href="/Nursery">
-                <DropdownItem>Nursery</DropdownItem>
+              <a className="nav-link" href="/StudentsReport">
+                <DropdownItem>StudentsReport</DropdownItem>
               </a>
 
-              <a className="nav-link" href="/Primary">
-                <DropdownItem>Primary</DropdownItem>
+              <a className="nav-link" href="/SubjectGrade">
+                <DropdownItem>SubjectGrade</DropdownItem>
               </a>
             </DropdownMenu>
           </ButtonDropdown>
@@ -85,16 +87,15 @@ function Navbar() {
               </a>
             </DropdownMenu>
           </ButtonDropdown>
-          <li className="nav-item">
-            <a href="/Register" className="nav-link">
-              Register
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/login" className="nav-link">
-              Login
-            </a>
-          </li>
+          <ButtonDropdown isOpen={summaryOpen} toggle={summaryToggle}>
+            <DropdownToggle caret>Summary</DropdownToggle>
+            <DropdownMenu>
+              <a className="nav-link" href="GeneralReports">
+                <DropdownItem>GeneralReports</DropdownItem>
+              </a>
+            </DropdownMenu>
+          </ButtonDropdown>
+          
         </ul>
       </nav>
     </>

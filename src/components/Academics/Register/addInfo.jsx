@@ -6,7 +6,6 @@ export default class AddInfo extends React.Component {
         this.state = {
         //   Addstudent: true,
         //   Attendance: 200,
-        //   data: [],
         error: undefined
         };
         this.onDataChange = this.onDataChange.bind(this);

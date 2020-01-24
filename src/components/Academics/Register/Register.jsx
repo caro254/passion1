@@ -1,51 +1,69 @@
-import React from "react";
-import AddInfo from "./addInfo";
+import React from 'react';
 
-class Attendance extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      // Addstudent: true,
-      // Attendance: 200,
-      data: []
-    };
-    this.onDataChange = this.onDataChange.bind(this);
-  }
-  onDataChange(data1) {
-    if(!data1) {
-      return 'Enter valid value to add item'
-    }
-    this.setState((prevState) => ({
-      data: prevState.data.concat(data1)
-    }))
-  }
+function Register() {
 
-  render() {
-    console.log(this.state.data)
-    return (
-      <div class="header">
-        <a href="#default" class="logo">
-          School Register
-        </a>
-        <div class="header-right"></div>
-        <div>
-          <div class="d-md-flex h-md-100 align-items-center">
-            <div class="col-md-6 p-0 bg-indigo h-md-100">
-              <div class="text-black d-md-flex align-items-center h-50 p-2 text-left justify-content-center">
-                <div class="logoarea pt-5 pb-5 col-md-9">
-                  <div class="container">
-                    <h2>List of Students</h2>
-                    {this.state.data.map((student, index) => <h1 key={index}>{student}</h1>)}                  
-                  </div>
-                </div>
-              </div>
-            </div>
-            <AddInfo handleAddData={this.onDataChange} />
-          </div>
-        </div>
-      </div>
-    );
-  }
+return(
+
+<div>
+<div className="table" />
+<tr>
+<th>No</th>
+<th>First Name </th>
+<th>Last Name</th>
+<th>Grade</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Alfreds</td>
+<td>Maria</td>
+<td>One</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Moctezuma</td>
+<td>Francisco</td>
+<td>Two</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ernst</td>
+<td>Roland</td>
+<td>three</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Bennett</td>
+<td>Helen Bennett</td>
+<td>Four</td>
+</tr>
+<tr>
+<td>5</td>
+<td> Bacchus</td>
+<td>Tannamuri</td>
+<td>Two</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Alimentari</td>
+<td>Rovelli</td>
+<td>One</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Alimentari</td>
+<td>Rovelli</td>
+<td>One</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Alimentari</td>
+<td>Rovelli</td>
+<td>One</td>
+</tr>
+</div>
+)
 }
+export default Register
 
-export default Attendance;
+  
+

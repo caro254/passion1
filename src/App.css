@@ -85,3 +85,35 @@ body {
   flex-wrap: initial;
 }
 
+.table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 500%;
+  height:200%;
+
+}
+
+.td, th {
+  border: 5px solid #dddddd;
+  text-align: left;
+  padding: 40px;
+  font-size: 20px;
+  border-block-end-width:20px;
+}
+.td, td {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 20px;
+  font-size: 20px;
+  border-block-end-width:10px;
+}
+
+.tr:nth-child(even) {
+  background-color: #dddddd;
+  text-decoration-color: #35bdff;
+  font-size:30px;
+}
+.theschool {
+  font-size:10px;
+
+}

@@ -16,17 +16,22 @@ import Calendar from "./components/Calendar/Calendar"
 import UpcomingEvents from "./components/Calendar/UpcomingEvents/UpcomingEvents";
 import Academics from "./components/Academics/Academics";
 import SchoolActivities from "./components/Calendar/SchoolActivities/SchoolActivities";
-import Attendance from "./components/Academics/Attendance/Attendance"
+import Attendance from "./components/Academics/Attendance/Attendance";
 import GeneralReports from "./components/Summary/GeneralReports/GeneralReports"
+
+
 
 // import Login from "./components/Login";
 // import SignUp from "./components/Signup";
 
+
 function App() {
   return (
+    
     <Router>
       <div className="App">
         <Navbar />
+    
         <Switch>
           <Route path="/home" exact component={Home} />
           
@@ -44,6 +49,7 @@ function App() {
           <Route path="/Upcomingevents" exact component={UpcomingEvents} />
           <Route path="/Attendance" exact component={Attendance}/>
           <Route path="/GeneralReports" exact component={GeneralReports}/>
+
         </Switch>
         {/* <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
